@@ -4,6 +4,28 @@ const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
+// Theme toggle functionality
+const themeSwitch = document.getElementById('theme-switch');
+const body = document.body;
+
+// Load saved theme or default to dark
+const savedTheme = localStorage.getItem('theme') || 'dark';
+if (savedTheme === 'light') {
+  body.setAttribute('data-theme', 'light');
+  themeSwitch.checked = true;
+}
+
+// Theme toggle event listener
+themeSwitch.addEventListener('change', () => {
+  if (themeSwitch.checked) {
+    body.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  } else {
+    body.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'dark');
+  }
+});
+
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
