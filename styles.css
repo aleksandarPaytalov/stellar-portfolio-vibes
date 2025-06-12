@@ -1,3 +1,4 @@
+
 /* CSS Variables for Themes */
 :root {
   /* Dark Theme (Default) */
@@ -182,9 +183,12 @@ body {
 }
 
 .theme-slider i {
-  font-size: 10px;
+  font-size: 12px;
   color: white;
-  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .theme-checkbox:checked + .theme-label .theme-slider {
