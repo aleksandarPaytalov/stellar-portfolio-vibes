@@ -1,4 +1,3 @@
-
 // Navigation functionality
 const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('nav-toggle');
@@ -12,19 +11,23 @@ const body = document.body;
 const savedTheme = localStorage.getItem('theme') || 'dark';
 if (savedTheme === 'light') {
   body.setAttribute('data-theme', 'light');
-  themeSwitch.checked = true;
+  if (themeSwitch) {
+    themeSwitch.checked = true;
+  }
 }
 
 // Theme toggle event listener
-themeSwitch.addEventListener('change', () => {
-  if (themeSwitch.checked) {
-    body.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-  } else {
-    body.removeAttribute('data-theme');
-    localStorage.setItem('theme', 'dark');
-  }
-});
+if (themeSwitch) {
+  themeSwitch.addEventListener('change', () => {
+    if (themeSwitch.checked) {
+      body.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      body.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+}
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
