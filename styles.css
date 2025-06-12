@@ -1,4 +1,3 @@
-
 /* CSS Variables for Themes */
 :root {
   /* Dark Theme (Default) */
@@ -177,18 +176,35 @@ body {
   border-radius: 50%;
   transition: transform 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-slider i {
+  font-size: 10px;
+  color: white;
+  z-index: 3;
 }
 
 .theme-checkbox:checked + .theme-label .theme-slider {
   transform: translateX(28px);
 }
 
-.theme-checkbox:checked + .theme-label .fa-sun {
-  color: var(--primary);
+.theme-checkbox:checked + .theme-label .theme-slider .fa-sun {
+  display: block;
 }
 
-.theme-checkbox:not(:checked) + .theme-label .fa-moon {
-  color: var(--primary);
+.theme-checkbox:checked + .theme-label .theme-slider .fa-moon {
+  display: none;
+}
+
+.theme-checkbox:not(:checked) + .theme-label .theme-slider .fa-sun {
+  display: none;
+}
+
+.theme-checkbox:not(:checked) + .theme-label .theme-slider .fa-moon {
+  display: block;
 }
 
 .nav-toggle {
