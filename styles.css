@@ -932,3 +932,21 @@ section {
 .char-counter.error {
   color: #dc3545;
 }
+
+/* Some improvements for smaller screens */
+@media (max-width: 768px) {
+  .tech-icon {
+    width: 90px;
+    height: 90px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px;
+    line-height: 1.0;
+    word-break: break-word;
+  }
+  
+  .tech-stack {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
