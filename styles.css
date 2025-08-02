@@ -268,20 +268,37 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+/* Fixed Hero Avatar Styles */
 .hero-avatar {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   background: var(--gradient);
   position: relative;
+  padding: 4px; /* Creates the gradient border effect */
+  overflow: hidden; /* This is crucial - clips the image to circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-avatar::before {
-  content: '';
-  position: absolute;
-  inset: 4px;
+.profile-img {
+  width: calc(100% - 8px); /* Accounts for the padding */
+  height: calc(100% - 8px); /* Accounts for the padding */
   border-radius: 50%;
-  background: var(--bg-primary);
+  object-fit: cover; /* Ensures photo fills circle properly */
+  object-position: center center; /* Centers the photo */
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.profile-img:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Remove the old ::before pseudo-element */
+.hero-avatar::before {
+  display: none !important;
 }
 
 /* Buttons */
@@ -505,7 +522,7 @@ section {
 }
 
 .project-image {
-  height: 200px;
+  height: 120px;
   background: var(--gradient);
   position: relative;
 }

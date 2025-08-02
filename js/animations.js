@@ -79,7 +79,7 @@ export const initAnimations = () => {
   // Typing effect for hero subtitle
   const setupTypingEffect = () => {
     const subtitle = document.querySelector('.hero-subtitle');
-    const text = '.NET Developer';
+    const text = '.NET Full-stack Developer';
     let index = 0;
     
     if (subtitle) {
