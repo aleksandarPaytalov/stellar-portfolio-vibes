@@ -1,0 +1,39 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Replace EmailJS secrets in config.js
+        run: |
+          sed -i 's/__SERVICE_ID__/${{ secrets.EMAILJS_SERVICE_ID }}/g' js/config.js
+          sed -i 's/__TEMPLATE_ID__/${{ secrets.EMAILJS_TEMPLATE_ID }}/g' js/config.js
+          sed -i 's/__PUBLIC_KEY__/${{ secrets.EMAILJS_PUBLIC_KEY }}/g' js/config.js
+          
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

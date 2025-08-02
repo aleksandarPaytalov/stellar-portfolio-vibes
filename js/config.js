@@ -9,4 +9,5 @@ export const emailConfig = {
 
 1. Copy `js/config.example.js` to `js/config.js`
 2. Add your EmailJS credentials to `js/config.js`
-3. Open `index.html` in your browser*/
+3. Open `index.html` in your browser
+4. In case You want you repository to be public and not private- set a github secrets for each step from 1 to 3*/
