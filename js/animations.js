@@ -5,25 +5,56 @@ export const initAnimations = () => {
   const animateSkillBars = () => {
     const skillBars = document.querySelectorAll('.skill-progress');
     const skillsSection = document.getElementById('skills');
-    
+
+    // Function to animate the skill bars
+    const animateBars = () => {
+      skillBars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        setTimeout(() => {
+          bar.style.width = width + '%';
+        }, 200);
+      });
+    };
+
+    // Create intersection observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          skillBars.forEach(bar => {
-            const width = bar.getAttribute('data-width');
-            setTimeout(() => {
-              bar.style.width = width + '%';
-            }, 200);
-          });
+          animateBars();
           observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.5
+      threshold: 0.1  // Lower threshold to trigger earlier
     });
-    
+
     if (skillsSection) {
       observer.observe(skillsSection);
+
+      // Also add a fallback that triggers after a delay
+      // This ensures animation works even if intersection observer fails
+      setTimeout(() => {
+        const rect = skillsSection.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (isInView && skillBars[0].style.width === '') {
+          // Only animate if not already animated and in view
+          animateBars();
+          observer.unobserve(skillsSection);
+        }
+      }, 2000);
+
+      // Additional fallback: Listen for hash changes (when clicking Skills link)
+      window.addEventListener('hashchange', () => {
+        if (window.location.hash === '#skills') {
+          setTimeout(() => {
+            if (skillBars[0].style.width === '') {
+              animateBars();
+              observer.unobserve(skillsSection);
+            }
+          }, 500);
+        }
+      });
     }
   };
 
