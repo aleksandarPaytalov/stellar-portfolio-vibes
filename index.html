@@ -54,7 +54,7 @@
     </nav>
 
     <!-- Scroll to Top Button (Mobile Only) -->
-    <div id="scroll-to-top" class="scroll-to-top" role="button" aria-label="Scroll to top" tabindex="0">
+    <div id="scroll-to-top-simple" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: rgba(102, 102, 102, 0.5); border-radius: 50%; color: white; text-align: center; line-height: 50px; font-size: 20px; cursor: pointer; z-index: 9999; display: none;" onclick="window.scrollTo(0,0)">
         ^
     </div>
 
@@ -501,6 +501,21 @@
     <!-- EmailJS Script -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="module" src="js/main.js"></script>
+
+    <!-- Simple Safari-compatible scroll button -->
+    <script>
+        window.addEventListener('scroll', function() {
+            var btn = document.getElementById('scroll-to-top-simple');
+            var aboutSection = document.getElementById('about');
+            if (btn && aboutSection && window.innerWidth <= 768) {
+                if (window.scrollY > aboutSection.offsetTop) {
+                    btn.style.display = 'block';
+                } else {
+                    btn.style.display = 'none';
+                }
+            }
+        });
+    </script>
 
 
 </body>
