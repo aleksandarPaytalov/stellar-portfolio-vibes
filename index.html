@@ -501,6 +501,41 @@
     <!-- EmailJS Script -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="module" src="js/main.js"></script>
+
+    <!-- Safari fallback for module loading issues -->
+    <script>
+        // Check if modules loaded properly, if not, load scripts directly
+        setTimeout(function() {
+            if (!window.scrollToTopInitialized) {
+                // Fallback initialization for Safari
+                console.log('Initializing scroll-to-top fallback for Safari');
+                const scrollToTopBtn = document.getElementById('scroll-to-top');
+                const aboutSection = document.getElementById('about');
+
+                if (scrollToTopBtn && aboutSection) {
+                    // Show/hide based on scroll position
+                    window.addEventListener('scroll', function() {
+                        const aboutSectionTop = aboutSection.offsetTop;
+                        if (window.scrollY > aboutSectionTop) {
+                            scrollToTopBtn.classList.add('visible');
+                        } else {
+                            scrollToTopBtn.classList.remove('visible');
+                        }
+                    });
+
+                    // Click handler
+                    scrollToTopBtn.addEventListener('click', function() {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    window.scrollToTopInitialized = true;
+                }
+            }
+        }, 1000);
+    </script>
 </body>
 
 </html>
