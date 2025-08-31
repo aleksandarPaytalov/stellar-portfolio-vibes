@@ -952,7 +952,9 @@ section {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
+  -webkit-transform: translateY(20px); /* Safari compatibility */
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease; /* Safari compatibility */
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   /* Center the arrow symbol */
   display: none; /* Hidden by default, will be flex when visible */
@@ -981,6 +983,7 @@ section {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  -webkit-transform: translateY(0); /* Safari compatibility */
 }
 
 .scroll-to-top:hover {
@@ -1011,6 +1014,10 @@ section {
     transform: translateY(20px);
     -webkit-transition: all 0.3s ease; /* Safari compatibility for transitions */
     transition: all 0.3s ease;
+    /* Additional Safari fixes */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
   }
 
   .scroll-to-top.visible {
@@ -1022,7 +1029,6 @@ section {
     -webkit-transform: translateY(-3px); /* Safari compatibility for hover */
     transform: translateY(-3px);
   }
-}
 
   .tech-icon {
     width: 90px;
