@@ -963,9 +963,9 @@ section {
 }
 
 /* Stretch only the text content, not the button shape */
-.scroll-to-top::before {
-  content: '^';
+.scroll-to-top .arrow-text {
   transform: scaleX(1.3);
+  -webkit-transform: scaleX(1.3); /* Safari compatibility */
   display: inline-block;
 }
 
@@ -1007,7 +1007,22 @@ section {
     -webkit-appearance: none; /* Remove iOS button styling */
     appearance: none; /* Remove button styling */
     -webkit-tap-highlight-color: transparent; /* Remove iOS tap highlight */
+    -webkit-transform: translateY(20px); /* Safari compatibility for initial state */
+    transform: translateY(20px);
+    -webkit-transition: all 0.3s ease; /* Safari compatibility for transitions */
+    transition: all 0.3s ease;
   }
+
+  .scroll-to-top.visible {
+    -webkit-transform: translateY(0); /* Safari compatibility for visible state */
+    transform: translateY(0);
+  }
+
+  .scroll-to-top:hover {
+    -webkit-transform: translateY(-3px); /* Safari compatibility for hover */
+    transform: translateY(-3px);
+  }
+}
 
   .tech-icon {
     width: 90px;
