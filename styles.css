@@ -960,7 +960,13 @@ section {
   justify-content: center;
   line-height: 1;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  transform: scaleX(1.3); /* Stretch horizontally to spread the legs */
+}
+
+/* Stretch only the text content, not the button shape */
+.scroll-to-top::before {
+  content: '^';
+  transform: scaleX(1.3);
+  display: inline-block;
 }
 
 /* Light theme styling */
@@ -997,7 +1003,10 @@ section {
 /* Some improvements for smaller screens */
 @media (max-width: 768px) {
   .scroll-to-top {
-    display: flex; /* Show as flex on mobile for proper centering */
+    display: flex !important; /* Show as flex on mobile for proper centering */
+    -webkit-appearance: none; /* Remove iOS button styling */
+    appearance: none; /* Remove button styling */
+    -webkit-tap-highlight-color: transparent; /* Remove iOS tap highlight */
   }
 
   .tech-icon {
