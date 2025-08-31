@@ -36,11 +36,23 @@ export const initNavigation = () => {
 
   // Scroll to top button functionality
   if (scrollToTopBtn) {
+    // Click handler
     scrollToTopBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
+    });
+
+    // Keyboard accessibility for div element
+    scrollToTopBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     });
   }
 

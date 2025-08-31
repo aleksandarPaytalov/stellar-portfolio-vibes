@@ -962,7 +962,7 @@ section {
 /* Some improvements for smaller screens */
 @media (max-width: 768px) {
   .scroll-to-top {
-    display: none !important; /* Hidden by default on mobile too */
+    display: none !important;
     position: fixed !important;
     bottom: 20px !important;
     right: 20px !important;
@@ -970,19 +970,18 @@ section {
     height: 50px !important;
     background: rgba(102, 102, 102, 0.25) !important;
     border-radius: 50% !important;
-    border: none !important;
     color: white !important;
     font-size: 1.8rem !important;
     text-align: center !important;
     line-height: 50px !important;
     z-index: 9999 !important;
     cursor: pointer !important;
-    -webkit-appearance: none;
-    appearance: none;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .scroll-to-top.visible {
-    display: block !important; /* Show when visible class is added */
+    display: block !important;
   }
 
   .tech-icon {
