@@ -1018,11 +1018,18 @@ section {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform, opacity;
+    /* Force hidden state initially for Safari */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
   }
 
   .scroll-to-top.visible {
     -webkit-transform: translateY(0); /* Safari compatibility for visible state */
     transform: translateY(0);
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
   }
 
   .scroll-to-top:hover {
@@ -1046,10 +1053,4 @@ section {
   }
 }
 
-@media (max-width: 768px) {
-  .scroll-to-top {
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-}
+
