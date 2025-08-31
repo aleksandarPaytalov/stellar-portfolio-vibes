@@ -933,7 +933,7 @@ section {
   color: #dc3545;
 }
 
-/* Scroll to Top Button */
+/* Scroll to Top Button - Simplified for Safari */
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -946,95 +946,43 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 1.8rem;
   font-weight: 900;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   cursor: pointer;
   z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  -webkit-transform: translateY(20px); /* Safari compatibility */
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease; /* Safari compatibility */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  /* Center the arrow symbol */
-  display: none; /* Hidden by default, will be flex when visible */
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  line-height: 48px;
+  display: none !important; /* Force hidden by default */
 }
 
-/* Stretch only the text content, not the button shape */
-.scroll-to-top .arrow-text {
-  transform: scaleX(1.3);
-  -webkit-transform: scaleX(1.3); /* Safari compatibility */
-  display: inline-block;
-}
-
-/* Light theme styling */
-[data-theme="light"] .scroll-to-top {
-  background: rgba(128, 128, 128, 0.15);
-  color: rgba(64, 64, 64, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-}
-
+/* Simplified for Safari compatibility */
 .scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  -webkit-transform: translateY(0); /* Safari compatibility */
-}
-
-.scroll-to-top:hover {
-  transform: translateY(-3px);
-  background: rgba(0, 0, 0, 0.15);
-  color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-[data-theme="light"] .scroll-to-top:hover {
-  background: rgba(128, 128, 128, 0.15);
-  color: rgba(64, 64, 64, 0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-}
-
-.scroll-to-top:active {
-  transform: translateY(-1px);
+  display: block !important;
 }
 
 /* Some improvements for smaller screens */
 @media (max-width: 768px) {
   .scroll-to-top {
-    display: flex !important; /* Show as flex on mobile for proper centering */
-    -webkit-appearance: none; /* Remove iOS button styling */
-    appearance: none; /* Remove button styling */
-    -webkit-tap-highlight-color: transparent; /* Remove iOS tap highlight */
-    -webkit-transform: translateY(20px); /* Safari compatibility for initial state */
-    transform: translateY(20px);
-    -webkit-transition: all 0.3s ease; /* Safari compatibility for transitions */
-    transition: all 0.3s ease;
-    /* Additional Safari fixes */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform, opacity;
-    /* Force hidden state initially for Safari */
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none;
+    display: none !important; /* Hidden by default on mobile too */
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    background: rgba(102, 102, 102, 0.25) !important;
+    border-radius: 50% !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.8rem !important;
+    text-align: center !important;
+    line-height: 50px !important;
+    z-index: 9999 !important;
+    cursor: pointer !important;
+    -webkit-appearance: none;
+    appearance: none;
   }
 
   .scroll-to-top.visible {
-    -webkit-transform: translateY(0); /* Safari compatibility for visible state */
-    transform: translateY(0);
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto;
-  }
-
-  .scroll-to-top:hover {
-    -webkit-transform: translateY(-3px); /* Safari compatibility for hover */
-    transform: translateY(-3px);
+    display: block !important; /* Show when visible class is added */
   }
 
   .tech-icon {
