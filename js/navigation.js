@@ -65,7 +65,4 @@ export const initNavigation = () => {
       }
     });
   });
-
-  // Set flag to indicate navigation is initialized
-  window.scrollToTopInitialized = true;
 };
