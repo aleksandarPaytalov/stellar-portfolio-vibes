@@ -1,501 +1,606 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aleksandar Paytalov - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <!-- Social Media Preview Control -->
-    <meta property="og:title" content="Aleksandar Paytalov - C# Full-Stack Developer Portfolio" />
-    <meta property="og:description"
-        content="Showcase of C# and .NET projects featuring clean code practices and systematic problem-solving." />
-    <meta property="og:image"
-        content="https://aleksandarpaytalov.github.io/stellar-portfolio-vibes/images/linkedin-preview.jpg" />
+    <meta
+      property="og:title"
+      content="Aleksandar Paytalov - C# Full-Stack Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Showcase of C# and .NET projects featuring clean code practices and systematic problem-solving."
+    />
+    <meta
+      property="og:image"
+      content="https://aleksandarpaytalov.github.io/stellar-portfolio-vibes/images/linkedin-preview.jpg"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image"
-        content="https://aleksandarpaytalov.github.io/stellar-portfolio-vibes/images/linkedin-preview.jpg" />
-</head>
+    <meta
+      name="twitter:image"
+      content="https://aleksandarpaytalov.github.io/stellar-portfolio-vibes/images/linkedin-preview.jpg"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                Aleksandar Paytalov
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="https://github.com/aleksandarPaytalov" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="theme-toggle">
-                <input type="checkbox" id="theme-switch" class="theme-checkbox">
-                <label for="theme-switch" class="theme-label">
-                    <span class="theme-slider">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                    </span>
-                </label>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-logo">Aleksandar Paytalov</div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a
+            href="https://github.com/aleksandarPaytalov"
+            class="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
+        <div class="theme-toggle">
+          <input type="checkbox" id="theme-switch" class="theme-checkbox" />
+          <label for="theme-switch" class="theme-label">
+            <span class="theme-slider">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </span>
+          </label>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Scroll to Top Button (Mobile Only) -->
-    <div id="scroll-to-top-simple" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: rgba(102, 102, 102, 0.5); border-radius: 50%; color: white; text-align: center; line-height: 50px; font-size: 20px; cursor: pointer; z-index: 9999; display: none;" onclick="window.scrollTo(0,0)">
-        ^
+    <div
+      id="scroll-to-top-simple"
+      style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: rgba(102, 102, 102, 0.5);
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 9999;
+        display: none;
+      "
+      onclick="window.scrollTo(0,0)"
+    >
+      ^
     </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="gradient-text">Aleksandar Paytalov</span>
-                </h1>
-                <h2 class="hero-subtitle">.NET Full-stack Developer</h2>
-                <p class="hero-description">
-                    Motivated and results-driven professional focused on continuously learning new
-                    technologies and solving complex problems through AI-driven solutions. Committed to
-                    contributing meaningful value to your organization and team's success while advancing
-                    my career as a developer.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-avatar">
-                    <img src="images/profile-photo.jpg" alt="Aleksandar Paytalov - .NET Developer" class="profile-img"
-                        loading="lazy">
-                </div>
-            </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Aleksandar Paytalov</span>
+          </h1>
+          <h2 class="hero-subtitle">.NET Full-stack Developer</h2>
+          <p class="hero-description">
+            Motivated and results-driven professional focused on continuously
+            learning new technologies and solving complex problems through
+            AI-driven solutions. Committed to contributing meaningful value to
+            your organization and team's success while advancing my career as a
+            developer.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
         </div>
+        <div class="hero-image">
+          <div class="hero-avatar">
+            <img
+              src="images/profile-photo.jpg"
+              alt="Aleksandar Paytalov - .NET Developer"
+              class="profile-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title gradient-text">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate .NET developer with a strong foundation in backend technologies and
-                        a growing expertise in frontend development. I love creating efficient, scalable,
-                        and user-friendly applications.
-                    </p>
-                    <p>
-                        Currently seeking opportunities to contribute to innovative projects and grow as a
-                        professional developer in a collaborative environment.
-                    </p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>3+</h3>
-                        <p>Years Learning</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>10+</h3>
-                        <p>Projects Built</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>7+</h3>
-                        <p>Technologies</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title gradient-text">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a passionate .NET developer with a strong foundation in
+              backend technologies and a growing expertise in frontend
+              development. I love creating efficient, scalable, and
+              user-friendly applications.
+            </p>
+            <p>
+              Currently seeking opportunities to contribute to innovative
+              projects and grow as a professional developer in a collaborative
+              environment.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <h3>3+</h3>
+              <p>Years Learning</p>
             </div>
+            <div class="stat-item">
+              <h3>10+</h3>
+              <p>Projects Built</p>
+            </div>
+            <div class="stat-item">
+              <h3>7+</h3>
+              <p>Technologies</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title gradient-text">Skills & Technologies</h2>
-            <p class="section-description">
-                A comprehensive overview of my technical expertise and proficiency levels
-            </p>
+      <div class="container">
+        <h2 class="section-title gradient-text">Skills & Technologies</h2>
+        <p class="section-description">
+          A comprehensive overview of my technical expertise and proficiency
+          levels
+        </p>
 
-            <!-- Tech Stack Icons -->
-            <div class="tech-stack">
-                <div class="tech-icon" data-tech="C#">C#</div>
-                <div class="tech-icon" data-tech=".NET">.NET</div>
-                <div class="tech-icon" data-tech="SQL">SQL</div>
-                <div class="tech-icon" data-tech="Jenkins">Jenkins</div>
-                <div class="tech-icon" data-tech="GitHub Actions">GA</div>
-                <div class="tech-icon" data-tech="JS">JS</div>
-                <div class="tech-icon" data-tech="Git">Git</div>
-                <div class="tech-icon" data-tech="Docker">Docker</div>
-                <div class="tech-icon" data-tech="Terraform">TF</div>
-                <div class="tech-icon" data-tech="Azure">Azure</div>
-                <div class="tech-icon" data-tech="React">React</div>
-                <div class="tech-icon" data-tech="NextJs">NextJS</div>
-                <div class="tech-icon" data-tech="TypeScript">TS</div>
-            </div>
-
-            <!-- Skill Bars -->
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend Development</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>HTML5</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>CSS3</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>JavaScript</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Backend Development</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>C#</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>.NET Core</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>SQL Server</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Entity Framework</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="70"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>DevOps & Tools</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Git</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>GitHub Actions</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Jenkins</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="70"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Docker</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Terraform</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Azure Cloud</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="75"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Other skills in learning</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>TypeScript</span>
-                            <span>25%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="25"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>NextJs</span>
-                            <span>25%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="25"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>React</span>
-                            <span>25%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="25"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Tech Stack Icons -->
+        <div class="tech-stack">
+          <div class="tech-icon" data-tech="C#">C#</div>
+          <div class="tech-icon" data-tech=".NET">.NET</div>
+          <div class="tech-icon" data-tech="SQL">SQL</div>
+          <div class="tech-icon" data-tech="Jenkins">Jenkins</div>
+          <div class="tech-icon" data-tech="GitHub Actions">GA</div>
+          <div class="tech-icon" data-tech="JS">JS</div>
+          <div class="tech-icon" data-tech="Git">Git</div>
+          <div class="tech-icon" data-tech="Docker">Docker</div>
+          <div class="tech-icon" data-tech="Terraform">TF</div>
+          <div class="tech-icon" data-tech="Azure">Azure</div>
+          <div class="tech-icon" data-tech="React">React</div>
+          <div class="tech-icon" data-tech="NextJs">NextJS</div>
+          <div class="tech-icon" data-tech="TypeScript">TS</div>
+          <div class="tech-icon" data-tech="Kubernetes">K8s</div>
         </div>
+
+        <!-- Skill Bars -->
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend Development</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>HTML5</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>CSS3</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>JavaScript</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Backend Development</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>C#</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>.NET Core</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>SQL Server</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Entity Framework</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>DevOps & Tools</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Git</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>GitHub Actions</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Jenkins</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Docker</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Terraform</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Azure Cloud</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Other skills & stacks</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>K8s</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>TypeScript</span>
+                <span>25%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="25"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>NextJs</span>
+                <span>35%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="35"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>React</span>
+                <span>40%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="40"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title gradient-text">Featured Projects</h2>
-            <p class="section-description">
-                Here are some of my recent projects that showcase my skills and experience
-            </p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-content">
-                        <h3>Workout Generator</h3>
-                        <p>A constraint-based workout generator built with vanilla JavaScript that creates
-                            balanced exercise routines with intelligent muscle group sequencing.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://aleksandarpaytalov.github.io/workout-generator/" class="btn btn-sm">Live
-                                Demo</a>
-                            <a href="https://github.com/aleksandarPaytalov/workout-generator"
-                                class="btn btn-sm btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-content">
-                        <h3>Task Management System</h3>
-                        <p>TeamWorkFlow is a modern, web-based manufacturing workflow management system designed to
-                            streamline
-                            operations in manufacturing environments. The application provides comprehensive tools for
-                            managing tasks,
-                            operators, machines, projects, and parts inventory with an intuitive, responsive interface.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ASP.NET Core 6.0 MVC</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">EF Core 6.0</span>
-                            <span class="tech-tag">ASP.NET Core Identity</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://teamworkflow.azurewebsites.net" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                            <a href="https://github.com/aleksandarPaytalov/TeamWorkFlow"
-                                class="btn btn-sm btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-content">
-                        <h3>Price Tracker</h3>
-                        <p>A comprehensive price tracking and budget management web application built with ASP.NET Core
-                            8 MVC,
-                            designed to help users monitor product prices, manage budgets, and save money through
-                            intelligent price alerts.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ASP.NET Core 8.0 MVC</span>
-                            <span class="tech-tag">SQL Server</span>
-                            <span class="tech-tag">EF Core 8.0</span>
-                            <span class="tech-tag">Razror Pages</span>
-                            <span class="tech-tag">Forms</span>
-                            <span class="tech-tag">ASP.NET Core Identity + Google OAuth 2.0</span>
-                            <span class="tech-tag">Bootstrap 5, Custom CSS + Font Awesome 6</span>
-                        </div>
-                        <div class="project-links">
-                            <!--<a href="#" class="btn btn-sm">Live Demo</a>-->
-                            <a href="https://github.com/aleksandarPaytalov/PriceTracker"
-                                class="btn btn-sm btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-content">
-                        <h3>AI Feature Tracker</h3>
-                        <p>A real-time dashboard tracking feature updates across the 15 most popular AI development
-                            tools.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Next.js 14 with App Router</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Supabase (PostgreSQL + Real-time)</span>
-                            <span class="tech-tag">Anthropic API (Claude)</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">Vercel deployment</span>
-                        </div>
-                        <div class="project-links">
-                            <!--<a href="#" class="btn btn-sm">Live Demo</a>-->
-                            <a href="https://github.com/aleksandarPaytalov/ai-platform"
-                                class="btn btn-sm btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-content">
-                        <h3>Stock market tracking app</h3>
-                        <p>Application in start-up phase</p>
-                        <div class="project-tech">
-                            <span class="tech-tag"></span>
-                            <span class="tech-tag"></span>
-                            <span class="tech-tag"></span>
-                            <span class="tech-tag"></span>
-                        </div>
-                        <div class="project-links">
-                            <!--<a href="#" class="btn btn-sm">Live Demo</a>-->
-                            <a href="#" class="btn btn-sm btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
+      <div class="container">
+        <h2 class="section-title gradient-text">Featured Projects</h2>
+        <p class="section-description">
+          Here are some of my recent projects that showcase my skills and
+          experience
+        </p>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-content">
+              <h3>Workout Generator</h3>
+              <p>
+                A constraint-based workout generator built with vanilla
+                JavaScript that creates balanced exercise routines with
+                intelligent muscle group sequencing.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://aleksandarpaytalov.github.io/workout-generator/"
+                  class="btn btn-sm"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/aleksandarPaytalov/workout-generator"
+                  class="btn btn-sm btn-outline"
+                  >GitHub</a
+                >
+              </div>
             </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-content">
+              <h3>Task Management System</h3>
+              <p>
+                TeamWorkFlow is a modern, web-based manufacturing workflow
+                management system designed to streamline operations in
+                manufacturing environments. The application provides
+                comprehensive tools for managing tasks, operators, machines,
+                projects, and parts inventory with an intuitive, responsive
+                interface.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">ASP.NET Core 6.0 MVC</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">EF Core 6.0</span>
+                <span class="tech-tag">ASP.NET Core Identity</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://teamworkflow.azurewebsites.net"
+                  class="btn btn-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/aleksandarPaytalov/TeamWorkFlow"
+                  class="btn btn-sm btn-outline"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-content">
+              <h3>Price Tracker</h3>
+              <p>
+                A comprehensive price tracking and budget management web
+                application built with ASP.NET Core 8 MVC, designed to help
+                users monitor product prices, manage budgets, and save money
+                through intelligent price alerts.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">ASP.NET Core 8.0 MVC</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">EF Core 8.0</span>
+                <span class="tech-tag">Razror Pages</span>
+                <span class="tech-tag">Forms</span>
+                <span class="tech-tag"
+                  >ASP.NET Core Identity + Google OAuth 2.0</span
+                >
+                <span class="tech-tag"
+                  >Bootstrap 5, Custom CSS + Font Awesome 6</span
+                >
+              </div>
+              <div class="project-links">
+                <!--<a href="#" class="btn btn-sm">Live Demo</a>-->
+                <a
+                  href="https://github.com/aleksandarPaytalov/PriceTracker"
+                  class="btn btn-sm btn-outline"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-content">
+              <h3>AI Feature Tracker</h3>
+              <p>
+                A real-time dashboard tracking feature updates across the 15
+                most popular AI development tools.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Next.js 14 with App Router</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Supabase (PostgreSQL + Real-time)</span>
+                <span class="tech-tag">Anthropic API (Claude)</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Vercel deployment</span>
+              </div>
+              <div class="project-links">
+                <!--<a href="#" class="btn btn-sm">Live Demo</a>-->
+                <a
+                  href="https://github.com/aleksandarPaytalov/ai-platform"
+                  class="btn btn-sm btn-outline"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image"></div>
+            <div class="project-content">
+              <h3>Stock market tracking app</h3>
+              <p>Application in start-up phase</p>
+              <div class="project-tech">
+                <span class="tech-tag"></span>
+                <span class="tech-tag"></span>
+                <span class="tech-tag"></span>
+                <span class="tech-tag"></span>
+              </div>
+              <div class="project-links">
+                <!--<a href="#" class="btn btn-sm">Live Demo</a>-->
+                <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title gradient-text">Get In Touch</h2>
-            <p class="section-description">
-                I will be happy to expand my knowledge and skills with you. Let's work together!
-            </p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>apaytalov89@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+359 (88) 528-1559</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Asenovgrad, Plovdiv, Bulgaria</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+      <div class="container">
+        <h2 class="section-title gradient-text">Get In Touch</h2>
+        <p class="section-description">
+          I will be happy to expand my knowledge and skills with you. Let's work
+          together!
+        </p>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>apaytalov89@gmail.com</p>
+              </div>
             </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+359 (88) 528-1559</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Asenovgrad, Plovdiv, Bulgaria</p>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>Made with passion</p>
-                </div>
-                <div class="footer-copy">
-                    <p>&copy; 2025 Aleksandar Paytalov. All rights reserved.</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Built with HTML, CSS, and JavaScript</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-text">
+            <p>Made with passion</p>
+          </div>
+          <div class="footer-copy">
+            <p>&copy; 2025 Aleksandar Paytalov. All rights reserved.</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>Built with HTML, CSS, and JavaScript</p>
+        </div>
+      </div>
     </footer>
 
     <!-- EmailJS Script -->
@@ -504,20 +609,17 @@
 
     <!-- Simple Safari-compatible scroll button -->
     <script>
-        window.addEventListener('scroll', function() {
-            var btn = document.getElementById('scroll-to-top-simple');
-            var aboutSection = document.getElementById('about');
-            if (btn && aboutSection && window.innerWidth <= 768) {
-                if (window.scrollY > aboutSection.offsetTop) {
-                    btn.style.display = 'block';
-                } else {
-                    btn.style.display = 'none';
-                }
-            }
-        });
+      window.addEventListener("scroll", function () {
+        var btn = document.getElementById("scroll-to-top-simple");
+        var aboutSection = document.getElementById("about");
+        if (btn && aboutSection && window.innerWidth <= 768) {
+          if (window.scrollY > aboutSection.offsetTop) {
+            btn.style.display = "block";
+          } else {
+            btn.style.display = "none";
+          }
+        }
+      });
     </script>
-
-
-</body>
-
+  </body>
 </html>
